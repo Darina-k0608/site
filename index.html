@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Метод координат в стереометрии (ЕГЭ №14)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Метод координат как способ решения задачи ЕГЭ №14</h1>
+        <p>Интерактивный тренажёр (Кривовяз Дарина, 10Б)</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">1. Уравнение прямой</a></li>
+            <li><a href="#section2">2. Расстояние до прямой</a></li>
+            <li><a href="#section3">3. Уравнение плоскости</a></li>
+            <li><a href="#section4">4. Расстояние до плоскости</a></li>
+            <li><a href="#section5">5. Угол между прямыми</a></li>
+            <li><a href="#section6">6. Угол прямая-плоскость</a></li>
+            <li><a href="#section7">7. Угол между плоскостями</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section1" class="card">
+            <h2>1. Уравнение прямой по двум точкам</h2>
+            <div class="formula">
+                <p>Каноническое уравнение прямой:</p>
+                <p>\[ \frac{x-x_1}{x_2-x_1} = \frac{y-y_1}{y_2-y_1} = \frac{z-z_1}{z_2-z_1} \]</p>
+            </div>
+            <div class="generator">
+                <p class="task-text" id="task1"></p>
+                <img src="" alt="Чертеж" class="task-img" id="img1">
+                <button onclick="generateTask1()">Сгенерировать задачу</button>
+            </div>
+        </section>
+
+        <section id="section2" class="card">
+            <h2>2. Расстояние от точки до прямой</h2>
+            <div class="formula">
+                <p>\[ d = \frac{|M_0M_1 \times \vec{s}|}{|\vec{s}|} \]</p>
+            </div>
+            <div class="generator">
+                <p class="task-text" id="task2"></p>
+                <img src="" alt="Чертеж" class="task-img" id="img2">
+                <button onclick="generateTask2()">Сгенерировать задачу</button>
+            </div>
+        </section>
+
+        <section id="section3" class="card">
+            <h2>3. Уравнение плоскости по трем точкам</h2>
+            <div class="formula">
+                <p>\[ \begin{vmatrix} x-x_1 & y-y_1 & z-z_1 \\ x_2-x_1 & y_2-y_1 & z_2-z_1 \\ x_3-x_1 & y_3-y_1 & z_3-z_1 \end{vmatrix} = 0 \]</p>
+            </div>
+            <div class="generator">
+                <p class="task-text" id="task3"></p>
+                <img src="" alt="Чертеж" class="task-img" id="img3">
+                <button onclick="generateTask3()">Сгенерировать задачу</button>
+            </div>
+        </section>
+
+        <section id="section4" class="card">
+            <h2>4. Расстояние от точки до плоскости</h2>
+            <div class="formula">
+                <p>\[ \rho = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}} \]</p>
+            </div>
+            <div class="generator">
+                <p class="task-text" id="task4"></p>
+                <img src="" alt="Чертеж" class="task-img" id="img4">
+                <button onclick="generateTask4()">Сгенерировать задачу</button>
+            </div>
+        </section>
+
+        <section id="section5" class="card">
+            <h2>5. Угол между скрещивающимися прямыми</h2>
+            <div class="formula">
+                <p>\[ \cos \alpha = \frac{|\vec{m}_1 \cdot \vec{m}_2|}{|\vec{m}_1| \cdot |\vec{m}_2|} \]</p>
+            </div>
+            <div class="generator">
+                <p class="task-text" id="task5"></p>
+                <img src="" alt="Чертеж" class="task-img" id="img5">
+                <button onclick="generateTask5()">Сгенерировать задачу</button>
+            </div>
+        </section>
+
+        <section id="section6" class="card">
+            <h2>6. Угол между прямой и плоскостью</h2>
+            <div class="formula">
+                <p>\[ \sin \alpha = \frac{|\vec{c} \cdot \vec{n}|}{|\vec{c}| \cdot |\vec{n}|} \]</p>
+            </div>
+            <div class="generator">
+                <p class="task-text" id="task6"></p>
+                <img src="" alt="Чертеж" class="task-img" id="img6">
+                <button onclick="generateTask6()">Сгенерировать задачу</button>
+            </div>
+        </section>
+
+        <section id="section7" class="card">
+            <h2>7. Угол между плоскостями</h2>
+            <div class="formula">
+                <p>\[ \cos \alpha = \frac{|\vec{n}_1 \cdot \vec{n}_2|}{|\vec{n}_1| \cdot |\vec{n}_2|} \]</p>
+            </div>
+            <div class="generator">
+                <p class="task-text" id="task7"></p>
+                <img src="" alt="Чертеж" class="task-img" id="img7">
+                <button onclick="generateTask7()">Сгенерировать задачу</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025-2026 Кривовяз Дарина, МАОУ «Гимназия №1» г. Канска</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
